@@ -7,6 +7,7 @@
 body {
     font-size: 1.25rem;
     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     background-color: #ffffff;
     color: #333333;
     min-height: 100vh;
@@ -75,30 +76,32 @@ body {
 /* Разные шрифты для слов */
 .font-1 {
     font-family: 'Playfair Display', serif;
-    font-weight: 700;
+    font-weight: 800;
     color: #2c3e50;
 }
 
 .font-2 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.5px;
 }
 
 .font-3 {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
+    font-weight: 500;
 }
 
 .font-4 {
     font-family: 'Poiret One', cursive;
+    font-weight: 400;
     letter-spacing: 2px;
     font-size: 1.4em;
 }
 
 .font-5 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: -0.5px;
     font-size: 1.4em;
 }
