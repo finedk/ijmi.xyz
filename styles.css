@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.25rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Первый текст - центрированный */
+.first-text {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2.04rem;
+    line-height: 1.8;
+}
+
+.first-text p {
+    margin-bottom: 20px;
+}
+
+/* Второй текст - блоками */
+.second-text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.text-block {
+    width: 80%;
+    margin: 20px 0;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+}
+
+.text-block:nth-child(even) {
+    border-left: none;
+    border-right: 2px solid rgba(51, 51, 51, 0.3);
+    margin-left: auto;
+    margin-right: 10%;
+    text-align: right;
+    padding-right: 25px;
+}
+
+.text-block:nth-child(odd) {
+    margin-left: 10%;
+    border-left: 2px solid rgba(51, 51, 51, 0.3);
+}
+
+.text-block:hover {
+    border-left-color: #ffffff;
+}
+
+.text-block p {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* Разные шрифты для слов */
+.font-1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.font-2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.font-3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+}
+
+.font-4 {
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 2px;
+    font-size: 1.4em;
+}
+
+.font-5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-size: 1.4em;
+}
+
+/* Анимация появления текста */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.first-text, .text-block {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+.first-text {
+    animation-delay: 0.3s;
+}
+
+.text-block:nth-child(1) { animation-delay: 0.6s; }
+.text-block:nth-child(2) { animation-delay: 0.9s; }
+.text-block:nth-child(3) { animation-delay: 1.2s; }
+.text-block:nth-child(4) { animation-delay: 1.5s; }
+.text-block:nth-child(5) { animation-delay: 1.8s; }
+.text-block:nth-child(6) { animation-delay: 2.1s; }
+.text-block:nth-child(7) { animation-delay: 2.4s; }
+.text-block:nth-child(8) { animation-delay: 2.7s; }
+
+/* Третий текст - вертикальное выравнивание */
+.third-text {
+    margin: 80px 0;
+    padding: 40px 0;
+    border-top: 2px solid rgba(51,51,51,0.1);
+}
+
+.third-text .text-block {
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px 40px;
+    border-left: none;
+    text-align: center;
+}
+
+.third-text .text-block p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+.third-text .text-block {
+    animation-delay: 3s;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .first-text {
+        font-size: 1.5rem;
+    }
+    
+    .text-block p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .first-text {
+        font-size: 1.3rem;
+    }
+    
+    .text-block {
+        padding-left: 15px;
+    }
+    
+    .text-block p {
+        font-size: 1.0rem;
+    }
+}
+
+body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.first-text {
+    scroll-snap-align: start;
+}
+
+.second-text {
+    scroll-snap-align: start;
+    scroll-margin-top: 100vh;
+}
+
+@media (max-width: 768px) {
+    .first-text {
+        font-size: 2.04rem;
+    }
+    
+    .third-text .text-block p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .first-text {
+        font-size: 1.6rem;
+    }
+    
+    .third-text .text-block {
+        width: 90%;
+        padding: 15px;
+    }
+}
